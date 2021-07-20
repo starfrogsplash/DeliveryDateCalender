@@ -2,7 +2,7 @@ import { format } from "date-fns";
 import { useState } from 'react';
 import { getDaysInOrder } from './utils/getDaysInOrder'
 
-const Calender = ({ isShowing, hide, currentDate, setDate }: { isShowing: any, hide: any, currentDate: any, setDate: any }) => {
+const Calender = ({ isShowing, hide, currentDate, setDate }: { isShowing: Boolean, hide: Function, currentDate: Number, setDate: Function }):JSX.Element | null => {
   const [selectedDay, setSelectedDay] = useState(currentDate)
   const today = Date.now()
   const dateFormatted = format(today, "MMMM yyyy").toString();
@@ -13,12 +13,12 @@ const Calender = ({ isShowing, hide, currentDate, setDate }: { isShowing: any, h
     setSelectedDay(parseInt(e.target.dataset.value))
   }
 
-  const changeDateHandler = (e: any) => {
+  const changeDateHandler = () => {
     setDate(selectedDay)
     hide()
   }
 
-  return isShowing && (
+  return isShowing ? (
     <>
       <div className="m-auto flex-col justify-center items-center overflow-x-hidden overflow-y-auto fixed inset-0 z-50 bg-white w-80 h-80">
         <div className="text-lg flex justify-center pb-3 text-brand-blue-500 font-gt-pressura-bold mt-4">{dateFormatted}</div>
@@ -26,7 +26,7 @@ const Calender = ({ isShowing, hide, currentDate, setDate }: { isShowing: any, h
           <table className="border-separate">
             <thead>
               <tr>
-                {weekdays.map((day, i) => (
+                {weekdays.map((day: string, i: number) => (
                   <th key={i} className="px-2 text-brand-blue-500 font-gt-pressura-mono">
                     {day}
                   </th>
@@ -35,7 +35,7 @@ const Calender = ({ isShowing, hide, currentDate, setDate }: { isShowing: any, h
               </tr>
             </thead>
             <tbody>
-              {getDaysInOrder(today).map((week: any, i: number) =>
+              {getDaysInOrder(today).map((week: number[], i: number) =>
               (<tr key={i}>{week.map((day: number, i: number) => <th key={i} className={`font-gt-pressura-regular px-2 ${selectedDay === day ? 'bg-brand-red-300 text-brand-white' : ''} ${day ? 'border-2' : ``} ${((i === 1 || i === 4 || i === 5) && day) ? `cursor-not-allowed bg-grey-200 text-grey-400` : `cursor-pointer border-brand-red-300 text-brand-red-300`}`}
                 onClick={((i === 1 || i === 4 || i === 5) && day) ? undefined : (e) => tableSelectHandler(e)}
                 data-value={day}
@@ -54,7 +54,7 @@ const Calender = ({ isShowing, hide, currentDate, setDate }: { isShowing: any, h
           </button>
           <div
             className="text-sm flex items-center cursor-pointer shadow-md bg-transparent border-2 border-brand-red-300 hover:bg-brand-red-200 hover:text-brand-white font-gt-pressura-bold text-brand-red-300 px-2 rounded"
-            onClick={(e) => changeDateHandler(e)}
+            onClick={() => changeDateHandler()}
           >
             CHANGE DATE
           </div>
@@ -66,7 +66,7 @@ const Calender = ({ isShowing, hide, currentDate, setDate }: { isShowing: any, h
       ></div>
     </>
 
-  )
+  ) : null
 
 }
 

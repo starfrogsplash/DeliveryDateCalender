@@ -6,7 +6,7 @@ import useModal from './useModal'
 import useDate from './useDate'
 import { format } from "date-fns";
 
-const App = () => {
+const App = (): JSX.Element => {
   const { isShowing, toggle } = useModal()
   const { currentDate, setCurrentDate } = useDate()
 
