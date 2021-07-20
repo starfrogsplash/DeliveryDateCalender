@@ -1,10 +1,11 @@
-# Getting Started with Create React App
+# Delivery Date Selector with Calender Modal
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-
-A Calender choose delivery date App for the current month, which opens up a calender as a modal to select
+A Delivery Date Selector App for the current month, which opens up a calender as a modal to select
 available dates
+
+styled with TailWind css
 
 ## To Install
 

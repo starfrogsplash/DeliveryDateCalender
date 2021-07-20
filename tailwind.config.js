@@ -1,0 +1,95 @@
+module.exports = {
+  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    clipPath: {
+      cl:'circle(50.0% at 100% 50%)'
+    },
+    boxShadow: {
+      sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
+      DEFAULT: '0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)',
+      md: '0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+      lg: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+      xl: '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+      '2xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+     '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
+      inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+      none: 'none',
+    },
+    extend: {
+      colors: {
+        'brand-blue-100': '#ecf4f9',
+        'brand-blue-200': '#c9dbe8',
+        'brand-blue-300': '#94b8d1',
+        'brand-blue-400': '#5d92b8',
+        'brand-blue-500': '#1e5d84', // BASE
+        'brand-blue-600': '#11486e',
+        'brand-blue-700': '#092d46',
+        'brand-yellow-100': '#fbf8e9',
+        'brand-yellow-200': '#fbedb6',
+        'brand-yellow-300': '#ffe180', // BASE
+        'brand-yellow-400': '#f6cd32',
+        'brand-yellow-500': '#efbf0b',
+        'brand-yellow-600': '#d9b226',
+        'brand-yellow-700': '#8c741f',
+        'brand-pink-100': '#f9ecec',
+        'brand-pink-200': '#f2c4c4',// BASE
+        'brand-pink-300': '#e89797',
+        'brand-pink-400': ' #df6d6d',
+        'brand-pink-500': ' #bf4040',
+        'brand-pink-600': '#933',
+        'brand-pink-700': ' #7a1f1f',
+        'brand-red-100': '#f9eeec',
+        'brand-red-200': ' #f5c5bc',
+        'brand-red-300': '#ef9f90',
+        'brand-red-400': '#e66c55', // BASE
+        'brand-red-500': '#cc4b33',
+        'brand-red-600': ' #a83924',
+        'brand-red-700': '#7e2b1b',
+        'brand-black': '#000',
+        'brand-white': '#fff',
+        'support-blue-100': '#f1fcfd',
+        'support-blue-200': '#beebf4',
+        'support-blue-300': '#0bb4d0',
+        'support-blue-400': ' #078aa2',
+        'support-blue-500': '#05697a',
+        'success-green-100': '#eff8ed',
+        'success-green-200': '#98d98c',
+        'success-green-300': ' #4dbd37',
+        'success-green-400': '#238a0f',
+        'success-green-500': ' #1f6412',
+        'danger-red-100': '#fdf2f1',
+        'danger-red-200': '#f5bebc',
+        'danger-red-300': '#d2322d',
+        'danger-red-400': ' #9d100b',
+        'danger-red-500': '#7a0a06',
+        'warning-orange-100': ' #fcf2e8',
+        'warning-orange-200': '#f9c794',
+        'warning-orange-300': '#f6820e',
+        'warning-orange-400': '#c60',
+        'warning-orange-500': '#66401a',
+        'grey-100': '#f7f5f3',
+        'grey-200': '#e7e6e4',
+        'grey-300': ' #cfccc9',
+        'grey-400': ' #b6b3af',
+        'grey-500': ' #9c9896',
+        'grey-600': '#696563',
+      },
+      fontFamily: {
+        'cooper-hewitt-bold': ['CooperHewitt-Bold'],
+        'gt-pressura-bold': ['GT-Pressura-Bold'],
+        'gt-pressura-mono-bold': ['GT-Pressura-Mono-Bold'],
+        'gt-pressura-regular': ['GT-Pressura-Regular'],
+        'gt-pressura-mono': ['GT-Pressura-Mono'],
+        'icomoon': ['icomoon']
+      },
+      height: {
+        'h-18': '4.5rem',
+       }
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
