@@ -5,6 +5,13 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 A Delivery Date Selector App for the current month, which opens up a calender as a modal to select
 available dates
 
+
+
+
+https://user-images.githubusercontent.com/22579826/126317369-e30fe5ee-5a2c-4395-b1f3-bfc5a63a87c4.mov
+
+
+
 styled with TailWind css
 
 ## To Install
