@@ -2,13 +2,13 @@ import { format } from "date-fns";
 import getDaysInMonth from 'date-fns/getDaysInMonth'
 import startOfMonth from 'date-fns/startOfMonth'
 
-  const getDaysInOrder = (today: number | Date):number[][] => {
+  const getDaysInOrder = (today: number):number[][] => {
     const daysInMonth = getDaysInMonth(today)
     const startDayOfMonth = parseInt(format(startOfMonth(today), "i")) - 1
 
     const numOfDays:number[] = [...new Array(daysInMonth)]
 
-    const rowOfDays: any[][] = [];
+    const rowOfDays: number[][] = [];
     let currentResultIndex = 0;
     for (let i = 0; i < numOfDays.length + startDayOfMonth; i++) {
       const isBeforeStartDay = i < startDayOfMonth;
@@ -23,10 +23,10 @@ import startOfMonth from 'date-fns/startOfMonth'
           validDay = lastDayfromPreviousRow + 1
         }
 
-        rowOfDays.push([validDay ? validDay : '']);
+        rowOfDays.push([validDay ? validDay : 0]);
       } else {
 
-        rowOfDays[currentResultIndex].push(isBeforeStartDay ? '' : (i + 1) - startDayOfMonth);
+        rowOfDays[currentResultIndex].push(isBeforeStartDay ? 0 : (i + 1) - startDayOfMonth);
       }
     }
 

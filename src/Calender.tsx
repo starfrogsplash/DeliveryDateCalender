@@ -37,9 +37,9 @@ const Calender = ({ isShowing, hide, currentDate, setDate }: { isShowing: Boolea
             <tbody>
               {getDaysInOrder(today).map((week: number[], i: number) =>
               (<tr key={i}>{week.map((day: number, i: number) => <th key={i} className={`font-gt-pressura-regular px-2 ${selectedDay === day ? 'bg-brand-red-300 text-brand-white' : ''} ${day ? 'border-2' : ``} ${((i === 1 || i === 4 || i === 5) && day) ? `cursor-not-allowed bg-grey-200 text-grey-400` : `cursor-pointer border-brand-red-300 text-brand-red-300`}`}
-                onClick={((i === 1 || i === 4 || i === 5) && day) ? undefined : (e) => tableSelectHandler(e)}
+                onClick={((i === 1 || i === 4 || i === 5) && day) || !day ? undefined : (e) => tableSelectHandler(e)}
                 data-value={day}
-              >{day}</th>)}</tr>))
+              >{day ? day : ''}</th>)}</tr>))
               }
             </tbody>
           </table>
