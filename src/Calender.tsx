@@ -2,7 +2,14 @@ import { format } from "date-fns";
 import { useState } from 'react';
 import { getDaysInOrder } from './utils/getDaysInOrder'
 
-const Calender = ({ isShowing, hide, currentDate, setDate }: { isShowing: Boolean, hide: Function, currentDate: Number, setDate: Function }):JSX.Element | null => {
+interface CalenderOptions {
+  isShowing: Boolean
+  hide: Function
+  currentDate: Number
+  setDate: Function
+}
+
+const Calender = ({ isShowing, hide, currentDate, setDate }: CalenderOptions): JSX.Element | null => {
   const [selectedDay, setSelectedDay] = useState(currentDate)
   const today = Date.now()
   const dateFormatted = format(today, "MMMM yyyy").toString();
