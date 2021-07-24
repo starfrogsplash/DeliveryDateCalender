@@ -1,9 +1,9 @@
 
 import Calender from './Calender'
-import calender from './images/calendar.svg'
-import van from './images/van.svg'
-import useModal from './useModal'
-import useDate from './useDate'
+import calender from '../images/calendar.svg'
+import van from '../images/van.svg'
+import useModal from '../customhooks/useModal'
+import useDate from '../customhooks/useDate'
 import { format } from "date-fns";
 
 const App = (): JSX.Element => {

@@ -1,6 +1,6 @@
 import { format } from "date-fns";
 import { useState } from 'react';
-import { getDaysInOrder } from './utils/getDaysInOrder'
+import { getDaysInOrder } from '../utils/getDaysInOrder'
 
 interface CalenderOptions {
   isShowing: Boolean

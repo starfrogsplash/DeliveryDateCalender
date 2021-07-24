@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Calender from './Calender';
+import Calender from '../components/Calender';
 
 test('renders CHANGE DATE text for change button', () => {
   render(<Calender
@@ -8,8 +8,8 @@ test('renders CHANGE DATE text for change button', () => {
     currentDate={12}
     setDate={() => {}}
   />);
-  const linkElement = screen.getByText(/CHANGE DATE/i);
-  expect(linkElement).toBeInTheDocument();
+  const divElement = screen.getByText(/CHANGE DATE/i);
+  expect(divElement).toBeInTheDocument();
 });
 
 test('renders Cancel & DONT CHANGE text for cancel button', () => {

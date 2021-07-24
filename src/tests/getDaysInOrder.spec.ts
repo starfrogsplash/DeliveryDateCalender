@@ -1,5 +1,5 @@
 
-import { getDaysInOrder } from './getDaysInOrder'
+import { getDaysInOrder } from '../utils/getDaysInOrder'
 
 describe('valid number of days returned with correct start day of the week', () => {
 
